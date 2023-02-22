@@ -16,7 +16,14 @@ if __name__ == '__main__':
 
     # set message for publisher
     topic.message = 'Demo Observer Pattern'
+    print(f"{'-'*20}\n")
 
+    # change message to verify notify and update
+    topic.message = 'Change message 2nd times'
+    print(f"{'-' * 20}\n")
 
+    # unregister sub_1
+    topic.unregister(subscriber=sub_2)
 
-
+    # change message to verify notify and update
+    topic.message = f'Unregister sub 2 (id: {sub_2.id})'
