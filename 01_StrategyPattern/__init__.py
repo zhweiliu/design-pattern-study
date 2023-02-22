@@ -1,0 +1,2 @@
+from SalaryDef import SalaryCalculator as SalaryCalculator
+import PaycheckFactor
