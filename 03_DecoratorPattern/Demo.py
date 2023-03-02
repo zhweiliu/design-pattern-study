@@ -24,9 +24,9 @@ if __name__ == '__main__':
 
     # Example for apply multiple decorators with different order
     print(f'Example 3 - image ads decorator output:')
-    print(AdsChannelDecorator(ImageAdsDecorator(image_ad), channel="Youtube Ads").get_content())
+    print(AdsChannelDecorator(ImageAdsDecorator(image_ad), channel="Youtube Ads").get_description())
     print(f'Example 3 - exchange decorators output:')
-    print(ImageAdsDecorator(AdsChannelDecorator(image_ad, channel="Instagram Ads")).get_content())
+    print(ImageAdsDecorator(AdsChannelDecorator(image_ad, channel="Instagram Ads")).get_description())
     print('-' * 20)
 
     # Example for inherit decorator class to setting different behavior, such as photo size limitation
@@ -36,6 +36,6 @@ if __name__ == '__main__':
     google_image_ads.width = 2560.0
     google_image_ads.height = 1440.0
     print(f'Over Google Image Ads size limitation')
-    print(google_image_ads.get_content())
+    print(google_image_ads.get_description())
 
 

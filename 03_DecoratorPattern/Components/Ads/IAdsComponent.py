@@ -30,3 +30,11 @@ class IAdsComponent(ABC):
         :return: (string)
         """
         pass
+
+    @abstractmethod
+    def get_description(self) -> dict:
+        """
+        Get ad description as a dictionary or a specific data model.
+        :return: dictionary
+        """
+        pass

@@ -9,10 +9,19 @@ class AdsChannelDecorator(IAddOnDecorator):
         self.ad_channel: str = channel
 
     def get_ad_channel(self) -> str:
-        return f'{self.ad_component.get_ad_channel()} in {self.ad_channel}'
+        return self.ad_channel
 
     def set_content(self, content: str) -> None:
         self.ad_component.set_content(content)
 
     def get_content(self) -> str:
         return self.ad_component.get_content()
+
+    def get_description(self) -> dict:
+        desc: dict = self.ad_component.get_description()
+        # update channel information
+        desc.update({
+            'channel': self.ad_channel
+        })
+        return desc
+

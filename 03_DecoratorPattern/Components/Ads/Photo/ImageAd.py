@@ -3,6 +3,7 @@ from ..IAdsComponent import IAdsComponent
 
 class ImageAd(IAdsComponent):
 
+
     def __init__(self, image_uri: str):
         super().__init__()
         self.content = image_uri
@@ -15,3 +16,8 @@ class ImageAd(IAdsComponent):
 
     def get_content(self) -> str:
         return self.content
+
+    def get_description(self) -> dict:
+        return {
+            'content': self.content
+        }

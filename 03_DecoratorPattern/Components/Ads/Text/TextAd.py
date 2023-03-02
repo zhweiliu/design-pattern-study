@@ -15,3 +15,8 @@ class TextAd(IAdsComponent):
 
     def get_content(self) -> str:
         return self.content
+
+    def get_description(self) -> dict:
+        return {
+            'content': self.content
+        }

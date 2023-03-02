@@ -16,3 +16,6 @@ class TextAdsDecorator(IAddOnDecorator):
 
     def get_content(self) -> str:
         return self.ad_component.get_content()
+
+    def get_description(self) -> dict:
+        return self.ad_component.get_description()
