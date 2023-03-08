@@ -1,11 +1,11 @@
-from .IProduct import IProduct, DescriptionData
+from .Product import Product, DescriptionData
 from ..Model import Material
 
 from .IronPlate import IronPlate
 from .CopperCable import CopperCable
 
 
-class CircuitBoard(IProduct):
+class CircuitBoard(Product):
     @property
     def name(self) -> str:
         return 'circuit board'

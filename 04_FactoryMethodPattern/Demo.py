@@ -38,4 +38,4 @@ if __name__ == '__main__':
     ]
 
     for fact in factories:
-        print(f'the {fact.__class__.__name__} get product {fact.product.name} description {fact.product.get_description()}')
+        print(f'{fact.__class__.__name__} get {fact.product.name} description {fact.product.get_description()}')

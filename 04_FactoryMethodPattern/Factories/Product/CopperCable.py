@@ -1,9 +1,9 @@
-from .IProduct import IProduct, DescriptionData
+from .Product import Product, DescriptionData
 from ..Model import Material
 from .CopperOre import CopperOre
 
 
-class CopperCable(IProduct):
+class CopperCable(Product):
 
     @property
     def name(self) -> str:

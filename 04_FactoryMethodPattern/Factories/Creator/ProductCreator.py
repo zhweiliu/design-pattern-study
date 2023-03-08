@@ -1,15 +1,15 @@
 from typing import Union
-from .ICreator import ICreator, IProduct, Material
+from .Creator import Creator, Product, Material
 from ..Product import IronPlate, CopperCable
 
 import random
 
 
-class ProductCreator(ICreator):
+class ProductCreator(Creator):
     def __init__(self):
         super().__init__(None)
 
-    def produce(self) -> Union[IProduct, None]:
+    def produce(self) -> Union[Product, None]:
         product_list = [IronPlate, CopperCable]
 
         self.product = product_list[random.randrange(len(product_list))]()

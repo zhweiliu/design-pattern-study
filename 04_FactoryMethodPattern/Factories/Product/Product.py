@@ -4,7 +4,7 @@ from typing import Any
 from ..Model import DescriptionData
 
 
-class IProduct(metaclass=ABCMeta):
+class Product(metaclass=ABCMeta):
 
     @property
     @abstractmethod

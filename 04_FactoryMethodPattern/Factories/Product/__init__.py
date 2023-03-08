@@ -1,4 +1,4 @@
-from .IProduct import IProduct, DescriptionData
+from .Product import Product, DescriptionData
 from .IronOre import IronOre
 from .CopperOre import CopperOre
 from .IronPlate import IronPlate

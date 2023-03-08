@@ -1,11 +1,11 @@
 from typing import Union
-from .ICreator import ICreator, IProduct, Material
+from .Creator import Creator, Product, Material
 from ..Product import *
 
 import random
 
 
-class RandomCreator(ICreator):
+class RandomCreator(Creator):
     """
     RandomCreator will provide a random product directly.
     """
@@ -13,7 +13,7 @@ class RandomCreator(ICreator):
     def __init__(self):
         super().__init__(None)
 
-    def produce(self) -> Union[IProduct, None]:
+    def produce(self) -> Union[Product, None]:
         product_list = [
             IronOre, CopperOre, IronPlate, CopperCable, CircuitBoard
         ]

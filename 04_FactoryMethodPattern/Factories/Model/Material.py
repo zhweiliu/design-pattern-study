@@ -1,9 +1,9 @@
 from typing import NamedTuple
-from ..Product import IProduct
+from ..Product import Product
 
 
 class Material(NamedTuple):
-    require: IProduct
+    require: Product
     amount: float
 
     def __repr__(self) -> str:

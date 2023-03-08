@@ -1,14 +1,14 @@
 from typing import Union
 
-from .ICreator import ICreator, IProduct, Material
+from .Creator import Creator, Product, Material
 
 
-class DefaultCreator(ICreator):
+class DefaultCreator(Creator):
     """
     DefaultCreator will provide a product at once.
     """
 
-    def produce(self) -> Union[IProduct, None]:
+    def produce(self) -> Union[Product, None]:
         product_description = self.product.get_description()
         require_materials: list[Material] = product_description.materials
 

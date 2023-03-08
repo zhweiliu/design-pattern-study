@@ -1,15 +1,15 @@
 from abc import ABCMeta, abstractmethod
-from ..Product import IProduct
+from ..Product import Product
 from ..Model import Material
 from typing import Union
 
 
-class ICreator(metaclass=ABCMeta):
+class Creator(metaclass=ABCMeta):
 
-    def __init__(self, product: Union[IProduct, None]):
+    def __init__(self, product: Union[Product, None]):
         super().__init__()
         # assign a specific product for creator
-        self.product: IProduct = product
+        self.product: Product = product
 
         # initialize the materials list,
         # use dictionary for unique each material
@@ -34,5 +34,5 @@ class ICreator(metaclass=ABCMeta):
         return result
 
     @abstractmethod
-    def produce(self) -> Union[IProduct, None]:
+    def produce(self) -> Union[Product, None]:
         pass
