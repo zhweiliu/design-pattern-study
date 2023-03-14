@@ -23,3 +23,5 @@ Factory Method Pattern 簡明扼要的說，就是定義 **製作者(Creator)** 
 ```
 
 *註:在 《Design Pattern》書中有給出明確的定義和說明。我覺得太過繞口，所以用自己的想法來表達*
+
+詳細文章發表在[我的blog](https://blog.zhengweiliu.com/posts/design-pattern/factory-method-pattern/)
